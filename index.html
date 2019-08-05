@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Студия пилатеса</title>
+        <meta charset="utf-8">
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link href="css/style.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body class="page">
+        <header class="header">
+            <div class="header-top d-flex justify-content-between">
+                <div class="logo header__logo">Pilates+</div>
+                <button type="button" class="header__menu-button">Меню</button>
+                <div class="header__phone-number">+7 918 365 06 07</div> 
+            </div>            
+            <div class="header-slogan">
+                <h1 class="header-slogan__head">Студия пилатеса</h1>
+                <p class="header-slogan__text">Твое здоровое тело через 10 занятий</p>
+            </div>
+            <a class="timetable-button button" href="#">Смотреть расписание</a>
+            <div id="navigation-menu" class="header-navigation">
+                <h2 class="header-navigation__head d-none">Навигация по странице</h2>
+                <ul class="header-navigation-menu nav nav-pills flex-column">
+                    <li class="header-navigation-menu__item nav-item"><a class="header-navigation-menu__link header-navigation-menu__link-active nav-link" href="#about">О пилатесе</a></li>
+                    <li class="header-navigation-menu__item nav-item"><a class="header-navigation-menu__link nav-link" href="#price-timetable">Расписание и стоимость</a></li>
+                    <li class="header-navigation-menu__item nav-item"><a class="header-navigation-menu__link nav-link" href="#exersizes">Как проходят занятия</a></li>
+                    <li class="header-navigation-menu__item nav-item"><a class="header-navigation-menu__link nav-link" href="#feedback">Отзывы</a></li>
+                    <li class="header-navigation-menu__item nav-item"><a class="header-navigation-menu__link nav-link" href="#contacts">Контакты</a></li>
+                </ul>
+                <button type="button" class="header-navigation__close-button">Закрыть</button>
+            </div>
+            <div class="header__navigation-number navigation-number d-none d-xl-block">01</div>
+        </header>
+        <main class="page-content">
+            <div id="about" class="about-pilates">
+                <h2 class="about-pilates__head block-head">О пилатесе</h2>
+                <p class="about-pilates__text-1">
+                    Пилатес соединяет элементы растяжки 
+                    с элементами силовой тренировки                                               
+                </p>
+                <p class="about-pilates__text-2">
+                    Комплекс упражнений укрепляет мышцы пресса 
+                    и спины, улучшает гибкость мышц и связок, 
+                    подвижность суставов <span class="about-pilates__text-br d-sm-none"><br></span>и избавляет 
+                    <span class="about-pilates__text-br d-none d-lg-inline"><br></span>от дискомфорта <span class="about-pilates__text-br d-lg-none"><br></span>в позвоночнике
+                </p>
+                <a class="about-pilates__more" href="#">Подробнее</a>
+                <div class="about-pilates__navigation-number navigation-number d-none d-xl-block">02</div>
+            </div>
+            <div id="price-timetable" class="price-timetable">
+                <h2 class="price-timetable__head block-head">Расписание и стоимость</h2>
+                <ul class="price-timetable-list d-flex flex-wrap">
+                    <li class="price-timetable-item price-timetable-item-novice">
+                        <h3 class="price-timetable-item__head price-timetable-item-novice__head">
+                            Уровень
+                            <span class="price-timetable-item__head-level">Новичок</span>
+                        </h3>
+                        <p class="price-timetable-item__price">150 руб. / занятие</p>
+                        <table class="price-timetable-item__timetable">
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пн</td>
+                                <td class="price-timetable-item__timetable-time">9:00 — 10:00</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">ср</td>
+                                <td class="price-timetable-item__timetable-time">9:00 — 10:00</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пт</td>
+                                <td class="price-timetable-item__timetable-time">9:00 — 10:00</td>
+                            </tr>
+                        </table>
+                        <a class="price-timetable-item__appointment-button button" href="#" data-toggle="modal" data-target="#appointment">Записаться</a>
+                    </li>
+                    <li class="price-timetable-item price-timetable-item-pro">
+                        <h3 class="price-timetable-item__head price-timetable-item-pro__head">
+                            Уровень
+                            <span class="price-timetable-item__head-level">Профи</span>
+                        </h3>
+                        <p class="price-timetable-item__price">200 руб. / занятие</p>
+                        <table class="price-timetable-item__timetable">
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пн</td>
+                                <td class="price-timetable-item__timetable-time">18:00 — 19:30</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">ср</td>
+                                <td class="price-timetable-item__timetable-time">18:00 — 19:30</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пт</td>
+                                <td class="price-timetable-item__timetable-time">18:00 — 19:30</td>
+                            </tr>
+                        </table>
+                        <a class="price-timetable-item__appointment-button button" href="#" data-toggle="modal" data-target="#appointment">Записаться</a>
+                    </li>
+                    <li class="price-timetable-item price-timetable-item-master">
+                        <h3 class="price-timetable-item__head price-timetable-item-master__head">
+                            Уровень
+                            <span class="price-timetable-item__head-level">Мастер</span>
+                        </h3>
+                        <p class="price-timetable-item__price">350 руб. / занятие</p>
+                        <table class="price-timetable-item__timetable">
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пн</td>
+                                <td class="price-timetable-item__timetable-time">20:00 — 21:30</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">ср</td>
+                                <td class="price-timetable-item__timetable-time">20:00 — 21:30</td>
+                            </tr>
+                            <tr class="price-timetable-item__timetable-row">
+                                <td class="price-timetable-item__timetable-day">пт</td>
+                                <td class="price-timetable-item__timetable-time">20:00 — 21:30</td>
+                            </tr>
+                        </table>
+                        <a class="price-timetable-item__appointment-button button" href="#" data-toggle="modal" data-target="#appointment">Записаться</a>
+                    </li>
+                </ul>
+                <div class="price-timetable__navigation-number navigation-number d-none d-xl-block">03</div>
+            </div>
+            <div id="exersizes" class="exersizes-description">
+                <h2 class="exersizes-description__head block-head">Как проходят занятия</h2>
+                <ul class="exersizes-description-list d-flex flex-column">
+                    <li class="exersizes-description-item exersizes-description-item-breath">
+                        <h3 class="exersizes-description-item__head exersizes-description-item-breath__head">Дыхательные техники</h3>
+                        <p class="exersizes-description-item__text exersizes-description-item-breath__text">
+                            Специальные дыхательные упражнения помогут 
+                            сконцентрировать внимание <span class="exersizes__text-br d-md-none"><br></span>и сфокусировать 
+                            сознание <span class="exersizes__text-br d-lg-none"><br></span>на мышцах тела
+                        </p>
+                    </li>
+                    <li class="exersizes-description-item exersizes-description-item-warmup">
+                        <h3 class="exersizes-description-item__head exersizes-description-item-warmup__head">Разминка</h3>
+                        <p class="exersizes-description-item__text exersizes-description-item-warmup__text">
+                            Перед началом занятия разогреваем тело: 
+                            проработываем мышцы спины, шеи, выполняем 
+                            упражнения на баланс <span class="exersizes__text-br d-sm-none"><br></span>под спокойную музыку
+                        </p>
+                    </li>
+                    <li class="exersizes-description-item exersizes-description-item-main">
+                        <h3 class="exersizes-description-item__head exersizes-description-item-main__head">Основной блок</h3>
+                        <p class="exersizes-description-item__text exersizes-description-item-main__text">
+                            Упражнения выполняются лежа на коврике 
+                            <span class="exersizes__text-br d-none d-lg-inline"><br></span>без оборудования или с малым оборудованием,<span class="exersizes__text-br d-none d-sm-inline"><br></span>
+                            в медленном темпе 
+                        </p>
+                    </li>
+                    <li class="exersizes-description-item exersizes-description-item-stretching">
+                        <h3 class="exersizes-description-item__head exersizes-description-item-stretching__head">Стрейчинг</h3>
+                        <p class="exersizes-description-item__text exersizes-description-item-stretching__text">
+                            В конце занятия выполняем специальные 
+                            упражнения для развития гибкости, снятия 
+                            усталости, стресса и мышечного <span class="exersizes-description-item__text-hidden d-none d-sm-inline d-lg-none">напряжения</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div id="feedback" class="feedback">
+                <h2 class="feedback__head block-head">Отзывы</h2>         
+                <div id="feedback-slider" class="feedback-slider carousel" data-ride="carousel" data-interval="false">
+                    <ul class="feedback-slider__indicators carousel-indicators">
+                        <li data-target="#feedback-slider" data-slide-to="0" class="feedback-slider__indicator feedback-slider__indicator-active active"></li>
+                        <li data-target="#feedback-slider" data-slide-to="1" class="feedback-slider__indicator"></li>
+                        <li data-target="#feedback-slider" data-slide-to="2" class="feedback-slider__indicator"></li>
+                    </ul>
+                    <div class="feedback-slider-list carousel-inner">
+                        <div class="feedback-slider-item feedback-slider-item-active carousel-item active">
+                            <div class="feedback-slider-item__author d-flex flex-wrap">
+                                <h3 class="feedback-slider-item__author-name order-2">Вероника Кулешова</h3>
+                                <img class="avatar avatar-small order-1" src="images/min-feedback-veronika.png">
+                                <img class="avatar avatar-middle order-1" src="images/min-feedback-veronika.png">
+                                <img class="avatar avatar-max order-1" src="images/max-feedback-veronika.png">
+                                <div class="feedback-slider-item__author-age order-3">25 лет</div>
+                                <div class="feedback-slider-item__author-social order-4">
+                                    <a class="feedback-slider-item__author-vk" href="#">Вконтакте</a>
+                                    <a class="feedback-slider-item__author-inst" href="#">Инстаграм</a>
+                                </div>
+                            </div>
+                            <p class="feedback-slider-item__text">
+                                Хожу на пилатес уже пять месяцев. 
+                                <span class="feedback-slider-item__text-br d-none d-lg-inline"><br></span>После десяти занятий уже <span class="feedback-slider-item__text-br d-sm-none"><br></span>увидела результат: тело 
+                                подтянулось, улучшилась осанка, появился пресс. 
+                                <span class="feedback-slider-item__text-hidden d-none d-lg-inline"><span class="feedback-slider-item__text-br d-none d-lg-inline"><br></span>
+                                И самое главное, пропал сильный изгиб поясничного 
+                                отдела, который меня очень беспокоил.</span>
+                            </p>
+                        </div>
+                        <div class="feedback-slider-item carousel-item">
+                            <div class="feedback-slider-item__author d-flex flex-wrap">
+                                <h3 class="feedback-slider-item__author-name feedback-slider-item__author-name-elizaveta order-2">Елизавета Смирнова</h3>
+                                <img class="avatar avatar-small order-1" src="images/min-feedback-elizaveta.png">
+                                <img class="avatar avatar-middle order-1" src="images/middle-feedback-elizaveta.png">
+                                <img class="avatar avatar-max order-1" src="images/max-feedback-elizaveta.png">
+                                <div class="feedback-slider-item__author-age feedback-slider-item__author-age-elizaveta order-3">29 лет</div>
+                                <div class="feedback-slider-item__author-social order-4">
+                                    <a class="feedback-slider-item__author-vk" href="#">Вконтакте</a>
+                                    <a class="feedback-slider-item__author-inst" href="#">Инстаграм</a>
+                                </div>
+                            </div>
+                            <p class="feedback-slider-item__text feedback-slider-item__text-elizaveta">
+                                Очень нравятся занятия, хожу уже пять месяцев. На 
+                                занятиях делаем много упражнений на пресс, бедра и 
+                                спину. Мышцы подтянулись, появился рельеф и 
+                                хорошее настроение :)
+                            </p>
+                        </div>
+                        <div class="feedback-slider-item carousel-item">
+                            <div class="feedback-slider-item__author d-flex flex-wrap">
+                                <h3 class="feedback-slider-item__author-name feedback-slider-item__author-name-kristina order-2">Кристина Егорова</h3>
+                                <img class="avatar avatar-small order-1" src="images/min-feedback-kristina.png">
+                                <img class="avatar avatar-middle order-1" src="images/middle-feedback-kristina.png">
+                                <img class="avatar avatar-max order-1" src="images/max-feedback-kristina.png">
+                                <div class="feedback-slider-item__author-age feedback-slider-item__author-age-kristina order-3">23 лет</div>
+                                <div class="feedback-slider-item__author-social order-4">
+                                    <a class="feedback-slider-item__author-vk" href="#">Вконтакте</a>
+                                    <a class="feedback-slider-item__author-inst" href="#">Инстаграм</a>
+                                </div>
+                            </div>
+                            <p class="feedback-slider-item__text feedback-slider-item__text-kristina">
+                                Рекомендую заниматься всем! У меня сколиоз и спина 
+                                часто болит после рабочего дня. После занятий 
+                                появилась лекость в мышцах и свобода движений. 
+                                Приходите! 
+                            </p>
+                        </div>
+                    </div>
+                    <a class="feedback-slider__control-prev carousel-control-prev d-none d-sm-block" href="#feedback-slider" data-slide="prev">
+                        <span class="feedback-slider__control-prev-icon carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="feedback-slider__control-next carousel-control-next d-none d-sm-block" href="#feedback-slider" data-slide="next">
+                        <span class="feedback-slider__control-next-icon carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <div class="feedback__navigation-number navigation-number d-none d-xl-block">05</div>
+            </div>
+            <div id="contacts" class="contacts">
+                <h2 class="contacts__head block-head">Контакты</h2>
+                <ul class="contacts-list">
+                    <li class="contacts-list-item">
+                        <h3 class="contacts-list-item__head contacts-list-item__head-address">Адрес</h3>
+                        <p class="contacts-list-item__text contacts-list-item__text-address">
+                            г. Кропоткин
+                            ул. Дугинец 10а                   
+                        </p>
+                    </li>
+                    <li class="contacts-list-item">
+                        <h3 class="contacts-list-item__head contacts-list-item__head-phone">Телефон</h3>
+                        <p class="contacts-list-item__text contacts-list-item__text-phone">
+                            +7 918 365 06 07
+                        </p>
+                    </li>
+                    <li class="contacts-list-item">
+                        <h3 class="contacts-list-item__head contacts-list-item__head-email">E-mail</h3>
+                        <p class="contacts-list-item__text contacts-list-item__text-email">
+                            pilatesplus@gmail.com
+                        </p>
+                    </li>
+                </ul>
+                <div class="contacts-map">
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="page-footer__inner d-flex frex-wrap">
+                <div class="page-footer-copyright">Pilates Plus, 2017</div>
+                <div class="logo page-footer__logo">Pilates+</div>
+                <ul class="page-footer-social d-flex justify-content-between">
+                    <li class="page-footer-social__item page-footer-social__vk"><a class="page-footer-social__link page-footer-social__link-vk" href="#">Вконтакте</a></li>
+                    <li class="page-footer-social__item page-footer-social__fb"><a class="page-footer-social__link page-footer-social__link-fb" href="#">Фейсбук</a></li>
+                    <li class="page-footer-social__item page-footer-social__inst"><a class="page-footer-social__link page-footer-social__link-inst" href="#">Инстаграм</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div id="appointment" class="appointment modal" data-backdrop="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <h2 class="appointment__head">Хочешь записаться на занятие?</h2>
+                    <p class="appointment__text">Оставьте контакты и наши менеджеры свяжуться в ближайшее время</p>
+                    <form class="appointment-form d-flex">
+                        <input type="text" name="name" class="appointment-form__input appointment-form__input-name" placeholder="Имя">
+                        <input type="tel" name="phone" class="appointment-form__input appointment-form__input-phone" placeholder="Телефон">
+                        <input type="email" name="email" class="appointment-form__input appointment-form__input-email" placeholder="E-mail">
+
+                        <label class="appointment-form__label-checkbox">
+                            <input type="checkbox" name="agreement" class="appointment-form__checkbox" checked>
+                            Я согласен на обработку персональных данных
+                        </label>
+
+                        <button type="submit" class="appointment-form__submit-button button">Записаться</button>
+                    </form>
+                    <button type="button" class="appointment__close-button" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>
